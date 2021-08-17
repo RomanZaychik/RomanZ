@@ -1,0 +1,66 @@
+@use '../mixins' as *;
+@use '../presets' as *;
+@use 'sass:math';
+
+.btn
+{
+    display: flex;
+
+    padding-right: 1em;
+    padding-left: 1em;
+
+    transition: background-color .5s;
+    letter-spacing: .1em;
+
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus
+    {
+        background-color: $color-accent;
+    }
+}
+
+.btn--light
+{
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, .1);
+
+    @include lg-min
+    {
+        font-size: 1.125rem;
+
+        min-width: 250px;
+        height: $gap-x3;
+    }
+    @include lg-md
+    {
+        min-width: 200px;
+        height: $gap * 2.5;
+    }
+    @include md
+    {
+        min-width: 170px;
+        height: $gap-x2;
+    }
+}
+
+.btn--primary
+{
+    font-size: 1.125rem;
+
+    height: $gap-x3;
+
+    border: 2px solid $color-primary;
+    background-color: rgb($color-primary, .8);
+
+    @include sm-min
+    {
+        min-width: 350px;
+    }
+    @include sm
+    {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../mixins' as *;
+@use '../../presets' as *;
+
+.header-logo
+{
+    font-size: 1.5rem;
+
+    margin-right: $gap;
+
+    letter-spacing: .25em;
+    &__link
+    {
+        display: block;
+
+        padding: $gap $gap $gap 0;
+    }
+    &__accent
+    {
+        display: inline-block;
+
+        padding: 12px 3px 16px 3px;
+
+        border: 3px solid $color-highlight;
+    }
+}
