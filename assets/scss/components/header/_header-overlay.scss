@@ -3,8 +3,10 @@
 
 .header-overlay
 {
+    position: absolute;
+
     opacity: .8;
     background-color: $color-primary;
 
-    @include abs-position;
+    inset: 0;
 }
