@@ -4,12 +4,9 @@
 
 .header-menu
 {
+    z-index: 2;
 
     @include abs-position;
-    
-    z-index: 2;
-    
-
     @include md
     {
         background-color: rgba($color-gray-dark, .25);

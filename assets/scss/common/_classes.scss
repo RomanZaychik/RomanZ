@@ -14,9 +14,9 @@
 
     justify-content: center;
     align-items: center;
-
-    @include sm {
-        letter-spacing: 0.05em;
+    @include sm
+    {
+        letter-spacing: .05em;
     }
 
     &:hover,

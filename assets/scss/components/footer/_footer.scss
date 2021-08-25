@@ -2,110 +2,107 @@
 @use '../../presets' as *;
 @use 'sass:math';
 
-.footer {
-  position: relative;
-  background-color: #2d3651;
-  min-height: 250px;
+.footer
+{
+    position: relative;
 
-  &__container {
-    @extend %container;
-    display: flex;
-    gap: 25px;
-    flex-direction: column;
-    align-items: center;
-    @include abs-position;
-    top: 25px;
-  }
+    min-height: 250px;
 
-  &-icons {
-    margin-top: 35px;
-    display: flex;
-    gap: 15px;
+    background-color: #2d3651;
 
-    &__link {
-      
+    &__container
+    {
+        top: 25px;
 
-      display: flex;
-      width: 100%;
-      height: 100%;
-     
-     
+        display: flex;
+        flex-direction: column;
 
-      justify-content: center;
-      align-items: center;
+        @extend %container;
+        gap: 25px;
+        align-items: center;
+        @include abs-position;
     }
 
-    &__item {
-      margin-top: 5px;
-      transition: background-color 0.5s;
-      width: 36px;
-      height: 36px;
-      background-size: contain;
-      background-color: #ffffff;
-      border-radius: 5px;
-      margin-bottom: -5px;
-      &:hover {
-        background-color: $color-accent;
-      }
+    &-icons
+    {
+        display: flex;
 
-      &:focus {
-        background-color: $color-accent;
-      }
+        margin-top: 35px;
 
+        gap: 15px;
+
+        &__link
+        {
+            display: flex;
+
+            width: 100%;
+            height: 100%;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__item
+        {
+            width: 36px;
+            height: 36px;
+            margin-top: math.div($gap, 4);
+            margin-bottom: -math.div($gap, 4);
+
+            transition: background-color .5s;
+
+            border-radius: math.div($gap, 4);
+            background-color: #fff;
+            background-size: contain;
+            &:hover
+            {
+                background-color: $color-accent;
+            }
+
+            &:focus
+            {
+                background-color: $color-accent;
+            }
+        }
     }
 
-    
-  }
+    &__line
+    {
+        width: 75px;
+        height: 0;
+        margin-top: math.div($gap, 4);
 
-  &__line {
-   
-    height: 0px;
-    width: 75px;
-    border: 1px solid rgba(#ffffff, 0.1);
-
-    
-      margin-top: 5px;
-    
-
-    // @include md-sm {
-    //   margin-top: 5px;
-    // }
-
-
-
-
-
-  }
-
-  &__text {
-    text-align: center;
-    text-transform: uppercase;
-
-    
-      margin-top: -5px;
-    
-
-    // @include md-sm {
-    //   margin-top: -5px;
-    // }
-
-
-
-
-    &--sm {
-      letter-spacing: 0.33em;
-      font-weight: 100;
-      margin: 0;
-      padding: 0;
-      margin-left: 10px;
+        border: 1px solid rgba(#fff, .1);
     }
 
-    &--lg {
-      margin: 0;
-      padding: 0;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      color: #ffffff;
+    &__text
+    {
+        margin-top: - math.div($gap, 4);
+
+        text-align: center;
+        text-transform: uppercase;
+
+        &--sm
+        {
+            font-weight: 100;
+
+            margin: 0;
+            margin-left: $gap-sm;
+            padding: 0;
+
+            letter-spacing: .33em;
+        }
+
+        &--lg
+        {
+            font-weight: 700;
+
+            margin: 0;
+            padding: 0;
+
+            letter-spacing: .05em;
+
+            color: #fff;
+        }
     }
-  }
 }
