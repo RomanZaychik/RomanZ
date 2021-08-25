@@ -3,11 +3,13 @@
 
 .header-logo
 {
+
+   
     font-size: 1.5rem;
 
     margin-right: $gap;
 
-    letter-spacing: .25em;
+    letter-spacing: .22em;
     &__link
     {
         display: block;
@@ -17,8 +19,8 @@
     &__accent
     {
         display: inline-block;
-
-        padding: 12px 3px 16px 3px;
+        margin-right: 3px;
+        padding: 12px 3px 15px 4px;
 
         border: 3px solid $color-highlight;
     }

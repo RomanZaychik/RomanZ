@@ -1,0 +1,208 @@
+@use '../../mixins' as *;
+@use '../../presets' as *;
+@use 'sass:math';
+
+.about {
+  background-color: $color-gray-light;
+
+  @include lg-min {
+    // min-height: 652px;
+    min-height: 691px;
+  }
+
+  @include lg-md {
+    // min-height: 563px;
+    min-height: 661px;
+  }
+
+  @include md-sm {
+    // min-height: 479px;
+    min-height: 687px;
+    
+  }
+
+  @include sm {
+    min-height: 1056px;
+  }
+
+  &__header {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+    color: #2d3651;
+    font-weight: 700;
+    font-family: $font-header;
+
+
+    @include lg-min {
+      font-size: 2.5rem;
+     
+    }
+
+    @include lg-md {
+      font-size: 2rem;
+      
+    }
+
+    @include md {
+      font-size: 1.5rem;
+    }
+
+    @include sm {
+      text-align: center;
+    }
+  }
+
+  &__container {
+   
+    height: 100%;
+    position: relative;
+    @extend %container;
+
+    @include lg-min {
+      gap: 50px;
+    }
+
+    @include lg-md {
+      gap: 20px;
+    }
+
+    @include md-sm {
+      gap: 10px;
+    }
+
+    @include sm-min {
+      display: grid;
+      grid-template-columns: 1fr 1px 271px;
+    }
+
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &-overlay {
+    background-color: #e5e5e5;
+  }
+
+  &-text {
+    width: 100%;
+    
+    position: relative;
+    overflow-x: hidden;
+
+
+    @include lg-min {
+      margin-top: 100px;
+    }
+
+    @include lg-md {
+      margin-top: 80px;
+    }
+
+    @include md {
+      margin-top: 60px;
+    }
+
+        
+
+    @include md-min {
+      font-size: 1.125rem;
+    }
+
+    &__clause {
+     
+      overflow-y: scroll;
+
+      @include lg-min {
+        max-width: 936px;
+        max-height: 320px;
+        margin-top: 30px;
+      }
+
+      @include lg-md {
+        max-width: 630px;
+        max-height: 315px;
+        margin-top: 20px;
+      }
+
+      @include md-sm {
+        max-width: 414px;
+        max-height: 275px;
+        margin-top: 15px;
+      }
+
+      @include sm {
+        max-width: 532px;
+        max-height: 315px;
+        margin-top: 15px;
+      }
+    }
+
+    &__image {
+      
+      display: flex;
+      justify-content: center;
+      border: none;
+      
+      
+
+      background-size: contain;
+
+      @include lg-min {
+        height: 487px;
+        width: 271px;
+        margin-top: 102px;
+        padding-right: 50px;
+      }
+
+      @include lg-md {
+        height: 459px;
+        width: 255px;
+        margin-top: 92px;
+        margin-left: 10px;
+      }
+
+      @include md-sm {
+        height: 425px;
+        width: 236px;
+        margin-top: 130px;
+        margin-left: 35px;
+
+      }
+
+      @include sm {
+        height: 487px;
+        width: 271px;
+      }
+    }
+
+    &__line {
+      width: 0;
+      
+      height: 200px;
+      
+      border: 1px solid rgba(#707070, 0.27);
+
+      @include lg-min {
+        margin-top: 245px;
+      }
+
+      @include lg-md {
+        margin-top: 190px;
+      }
+      
+      @include md-sm {
+        margin-top: 145px;
+        margin-left: 35px;
+      }
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+}

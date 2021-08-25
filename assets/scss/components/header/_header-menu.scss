@@ -4,11 +4,11 @@
 
 .header-menu
 {
-    position: absolute;
+
+    @include abs-position;
+    
     z-index: 2;
-    top: 0;
-    right: 0;
-    left: 0;
+    
 
     @include md
     {
