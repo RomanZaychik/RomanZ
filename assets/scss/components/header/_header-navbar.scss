@@ -5,16 +5,16 @@
 .header-navbar
 {
     margin-right: -$gap-sm;
-    margin-bottom: - math.div($gap, 4);
+    margin-bottom: -$gap-sm2;
     &__btn
     {
         position: absolute;
-        top: $gap-x2;
         right: $gap;
 
-        width: 30px;
+        width: $gap-lg;
         height: 24px;
         margin: 0;
+        margin-top: -13px;
 
         cursor: pointer;
         transition: .5s ease-in-out;
@@ -147,8 +147,8 @@
             @include md
             {
                 position: absolute;
-                top: 100px;
-                right: 50px;
+                top: $gap-x5;
+                right: $gap * 2.5;
 
                 display: flex !important;
                 flex-direction: column;

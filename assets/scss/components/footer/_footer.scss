@@ -18,7 +18,7 @@
         flex-direction: column;
 
         @extend %container;
-        gap: 25px;
+        gap: 23px;
         align-items: center;
         @include abs-position;
     }
@@ -27,9 +27,9 @@
     {
         display: flex;
 
-        margin-top: 35px;
+        margin-top: $gap-x3;
 
-        gap: 15px;
+        gap: 19px;
 
         &__link
         {
@@ -38,31 +38,10 @@
             width: 100%;
             height: 100%;
 
+            transition: color 1s;
+
             justify-content: center;
             align-items: center;
-        }
-
-        &__item
-        {
-            width: 36px;
-            height: 36px;
-            margin-top: math.div($gap, 4);
-            margin-bottom: - math.div($gap, 4);
-
-            transition: background-color .5s;
-
-            border-radius: math.div($gap, 4);
-            background-color: #fff;
-            background-size: contain;
-            &:hover
-            {
-                background-color: $color-accent;
-            }
-
-            &:focus
-            {
-                background-color: $color-accent;
-            }
         }
     }
 
@@ -70,14 +49,14 @@
     {
         width: 75px;
         height: 0;
-        margin-top: math.div($gap, 4);
+        margin-top: $gap-sm2;
 
         border: 1px solid rgba(#fff, .1);
     }
 
     &__text
     {
-        margin-top: - math.div($gap, 4);
+        margin-top: -$gap-sm2;
 
         text-align: center;
         text-transform: uppercase;
@@ -104,5 +83,22 @@
 
             color: #fff;
         }
+    }
+}
+
+.fab
+{
+    font-size: 36px;
+
+    transition: color 1s;
+
+    &:hover
+    {
+        color: $color-accent;
+    }
+
+    &:focus
+    {
+        color: $color-accent;
     }
 }

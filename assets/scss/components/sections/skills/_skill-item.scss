@@ -5,7 +5,13 @@
 {
     position: relative;
 
+    display: grid;
     overflow: hidden;
+
+    padding: $gap;
+
+    align-items: center;
+    justify-items: center;
 
     &:hover
     {
@@ -29,6 +35,8 @@
         z-index: 1;
 
         margin: 0;
+
+        letter-spacing: .1em;
 
         @include abs-position;
     }

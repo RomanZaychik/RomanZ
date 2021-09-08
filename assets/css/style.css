@@ -422,6 +422,7 @@ a {
   position: relative;
   display: grid;
   min-height: 100vh;
+  padding: 100px 0;
   color: #fff;
   background-color: #2d3651;
   background-image: url(../img/img-header.png);
@@ -444,6 +445,7 @@ a {
 
 .header-menu {
   z-index: 2;
+  margin-top: 20px;
   position: absolute;
   top: 0;
   right: 0;
@@ -452,6 +454,7 @@ a {
 }
 .header-menu__container {
   display: grid;
+  margin-top: -20px;
   gap: 20px;
   grid-template-columns: auto 1fr;
   -webkit-box-align: center;
@@ -482,11 +485,11 @@ a {
 }
 .header-navbar__btn {
   position: absolute;
-  top: 40px;
   right: 20px;
   width: 30px;
   height: 24px;
   margin: 0;
+  margin-top: -13px;
   cursor: pointer;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
@@ -592,6 +595,9 @@ a {
           justify-content: center;
   gap: 20px;
 }
+.header-content__title {
+  text-align: center;
+}
 .skills__container {
   display: grid;
   margin-bottom: 20px;
@@ -609,7 +615,14 @@ a {
 
 .skill-item {
   position: relative;
+  display: grid;
   overflow: hidden;
+  padding: 20px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
 }
 .skill-item:hover .skill-item__link {
   color: #d66926;
@@ -625,6 +638,7 @@ a {
 .skill-item__title {
   z-index: 1;
   margin: 0;
+  letter-spacing: 0.1em;
   position: absolute;
   top: 0;
   right: 0;
@@ -738,16 +752,21 @@ a {
   position: relative;
   overflow-x: hidden;
   width: 100%;
+  letter-spacing: 0.055em;
 }
 .about-text__clause {
-  overflow-y: scroll;
+  overflow: hidden;
+  letter-spacing: 0.055em;
 }
 .about-text__image {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: 100%;
   border: none;
+  background-repeat: no-repeat;
   background-size: contain;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -769,7 +788,6 @@ a {
   position: relative;
   position: relative;
   height: 100%;
-  padding: 30px 0;
 }
 .form-content {
   display: grid;
@@ -796,33 +814,23 @@ a {
   background-color: #d66926;
 }
 .form-content__item::-webkit-input-placeholder {
-  color: #fff;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.51);
 }
 .form-content__item::-moz-placeholder {
-  color: #fff;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.51);
 }
 .form-content__item:-ms-input-placeholder {
-  color: #fff;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.51);
 }
 .form-content__item::-ms-input-placeholder {
-  color: #fff;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.51);
 }
 .form-content__item::placeholder {
-  color: #fff;
-}
-.form-content__item--lt::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.51);
-}
-.form-content__item--lt::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.51);
-}
-.form-content__item--lt:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.51);
-}
-.form-content__item--lt::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.51);
-}
-.form-content__item--lt::placeholder {
+  letter-spacing: 0.15em;
   color: rgba(255, 255, 255, 0.51);
 }
 .form-overlay {
@@ -848,8 +856,6 @@ a {
   display: grid;
   margin-bottom: 20px;
   gap: 20px;
-  grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
-  grid-template-columns: repeat(4, 1fr);
 }
 .posts-item {
   position: relative;
@@ -865,7 +871,7 @@ a {
           flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: brown;
+  background-color: #2d3651;
 }
 .posts-item__link {
   display: -webkit-box;
@@ -919,26 +925,15 @@ a {
 .posts-item__text {
   position: absolute;
   top: 300px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0;
-  padding: 10px;
+  display: grid;
+  padding: 20px;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   color: #637588;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
 }
 .posts-item__text--title {
   font-size: 1.125rem;
@@ -991,7 +986,7 @@ a {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 25px;
+  gap: 23px;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1007,8 +1002,8 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 35px;
-  gap: 15px;
+  margin-top: 60px;
+  gap: 19px;
 }
 .footer-icons__link {
   display: -webkit-box;
@@ -1017,6 +1012,9 @@ a {
   display: flex;
   width: 100%;
   height: 100%;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1025,24 +1023,6 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.footer-icons__item {
-  width: 36px;
-  height: 36px;
-  margin-top: 5px;
-  margin-bottom: -5px;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-  border-radius: 5px;
-  background-color: #fff;
-  background-size: contain;
-}
-.footer-icons__item:hover {
-  background-color: #d66926;
-}
-.footer-icons__item:focus {
-  background-color: #d66926;
 }
 .footer__line {
   width: 75px;
@@ -1069,6 +1049,19 @@ a {
   letter-spacing: 0.05em;
   color: #fff;
 }
+
+.fab {
+  font-size: 36px;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+}
+.fab:hover {
+  color: #d66926;
+}
+.fab:focus {
+  color: #d66926;
+}
 @media (min-width: 576px) {
   .btn--primary {
     min-width: 350px;
@@ -1076,10 +1069,6 @@ a {
   .skills {
     margin-bottom: 30px;
     padding: 10px;
-  }
-  .about__container {
-    display: grid;
-    grid-template-columns: 1fr 1px 271px;
   }
 }
 @media (min-height: 691px) {
@@ -1104,8 +1093,9 @@ a {
   .skill-item__link {
     font-size: 1.25rem;
   }
-  .about-text {
-    font-size: 1.125rem;
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr 1px 271px;
   }
   .form-content {
     grid-template-columns: repeat(3, 1fr);
@@ -1121,7 +1111,7 @@ a {
     height: 60px;
   }
   .header-content__title {
-    margin: 0 0 51px;
+    margin: 0 0 53px;
   }
   .skills__container {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
@@ -1138,21 +1128,17 @@ a {
     gap: 50px;
   }
   .about-text {
+    font-size: 1.125rem;
     margin-top: 100px;
   }
   .about-text__clause {
-    max-width: 936px;
-    max-height: 320px;
-    margin-top: 30px;
+    margin-top: 25px;
   }
   .about-text__image {
-    width: 271px;
-    height: 487px;
     margin-top: 102px;
-    padding-right: 50px;
   }
   .about-text__line {
-    margin-top: 245px;
+    margin-top: 235px;
   }
   .posts {
     margin-top: 100px;
@@ -1165,10 +1151,9 @@ a {
   .posts__container {
     grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 545px;
   }
   .posts-item__link {
-    height: 545px;
+    height: 540px;
   }
   .posts-item__text {
     height: 245px;
@@ -1183,7 +1168,7 @@ a {
     height: 50px;
   }
   .header-content__title {
-    margin: 0 0 41px;
+    margin: 0 0 43px;
   }
   .skills__container {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
@@ -1197,24 +1182,20 @@ a {
     font-size: 2rem;
   }
   .about__container {
-    gap: 20px;
+    gap: 40px;
   }
   .about-text {
-    margin-top: 80px;
+    margin-top: 85px;
   }
   .about-text__clause {
-    max-width: 630px;
-    max-height: 315px;
     margin-top: 20px;
   }
   .about-text__image {
-    width: 255px;
-    height: 459px;
-    margin-top: 92px;
-    margin-left: 10px;
+    margin-top: 90px;
   }
   .about-text__line {
-    margin-top: 190px;
+    margin-top: 195px;
+    margin-left: 20px;
   }
   .posts {
     margin-top: 80px;
@@ -1227,7 +1208,6 @@ a {
   .posts__container {
     grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 520px;
   }
   .posts-item__link {
     height: 520px;
@@ -1239,6 +1219,9 @@ a {
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
+  }
+  .btn {
+    letter-spacing: 0.05em;
   }
   .btn--light {
     min-width: 170px;
@@ -1271,7 +1254,7 @@ a {
     gap: 10px;
   }
   .header-content__title {
-    margin: 0 0 31px;
+    margin: 0 0 33px;
   }
   .skill-item__link {
     font-size: 1.125rem;
@@ -1301,22 +1284,18 @@ a {
     min-height: 687px;
   }
   .about__container {
+    display: grid;
     gap: 10px;
+    grid-template-columns: 1fr 1px 236px;
   }
   .about-text__clause {
-    max-width: 414px;
-    max-height: 275px;
     margin-top: 15px;
   }
   .about-text__image {
-    width: 236px;
-    height: 425px;
     margin-top: 130px;
-    margin-left: 35px;
   }
   .about-text__line {
     margin-top: 145px;
-    margin-left: 35px;
   }
   .form-content {
     grid-template-columns: repeat(2, 1fr);
@@ -1327,13 +1306,9 @@ a {
   .posts__container {
     grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 540px;
   }
   .posts-item__link {
     height: 540px;
-  }
-  .posts-item__link {
-    height: 480px;
   }
   .posts-item__text {
     height: 240px;
@@ -1345,9 +1320,6 @@ a {
   }
 }
 @media (max-width: 575.8px) {
-  .btn {
-    letter-spacing: 0.05em;
-  }
   .btn--primary {
     min-width: 100%;
   }
@@ -1393,13 +1365,12 @@ a {
     gap: 10px;
   }
   .about-text__clause {
-    max-width: 532px;
-    max-height: 315px;
     margin-top: 15px;
   }
   .about-text__image {
     width: 271px;
     height: 487px;
+    margin-top: -10px;
   }
   .about-text__line {
     display: none;
@@ -1410,7 +1381,9 @@ a {
   .posts__container {
     grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
     grid-template-columns: 1fr;
-    grid-auto-rows: 480px;
+  }
+  .posts-item__link {
+    height: 480px;
   }
   .posts-item__text {
     height: 180px;

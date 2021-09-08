@@ -8,17 +8,14 @@
 
     @include lg-min
     {
-        // min-height: 652px;
         min-height: 691px;
     }
     @include lg-md
     {
-        // min-height: 563px;
         min-height: 661px;
     }
     @include md-sm
     {
-        // min-height: 479px;
         min-height: 687px;
     }
     @include sm
@@ -69,13 +66,16 @@
         }
         @include lg-md
         {
-            gap: $gap;
+            gap: $gap-x2;
         }
         @include md-sm
         {
+            display: grid;
+
             gap: $gap-sm;
+            grid-template-columns: 1fr 1px 236px;
         }
-        @include sm-min
+        @include md-min
         {
             display: grid;
 
@@ -104,49 +104,43 @@
 
         width: 100%;
 
+        letter-spacing: .055em;
+
         @include lg-min
         {
+            font-size: 1.125rem;
+
             margin-top: $gap-x5;
         }
         @include lg-md
         {
-            margin-top: $gap-x4;
+            margin-top: 85px;
         }
         @include md
         {
             margin-top: $gap-x3;
         }
-        @include md-min
-        {
-            font-size: 1.125rem;
-        }
 
         &__clause
         {
-            overflow-y: scroll;
+            overflow: hidden;
+
+            letter-spacing: .055em;
 
             @include lg-min
             {
-                max-width: 936px;
-                max-height: 320px;
-                margin-top: $gap-lg;
+                margin-top: 25px;
             }
             @include lg-md
             {
-                max-width: 630px;
-                max-height: 315px;
                 margin-top: $gap;
             }
             @include md-sm
             {
-                max-width: 414px;
-                max-height: 275px;
                 margin-top: $gap * .75;
             }
             @include sm
             {
-                max-width: 532px;
-                max-height: 315px;
                 margin-top: $gap * .75;
             }
         }
@@ -155,35 +149,31 @@
         {
             display: flex;
 
+            width: 100%;
+            height: 100%;
+
             border: none;
+            background-repeat: no-repeat;
             background-size: contain;
 
             justify-content: center;
             @include lg-min
             {
-                width: 271px;
-                height: 487px;
                 margin-top: 102px;
-                padding-right: $gap * 2.5;
             }
             @include lg-md
             {
-                width: 255px;
-                height: 459px;
-                margin-top: 92px;
-                margin-left: $gap-sm;
+                margin-top: 90px;
             }
             @include md-sm
             {
-                width: 236px;
-                height: 425px;
                 margin-top: 130px;
-                margin-left: 35px;
             }
             @include sm
             {
                 width: 271px;
                 height: 487px;
+                margin-top: -$gap-sm;
             }
         }
 
@@ -191,21 +181,23 @@
         {
             width: 0;
             height: 200px;
+            //   background-color: brown;
 
             border: 1px solid rgba(#707070, .27);
 
             @include lg-min
             {
-                margin-top: 245px;
+                margin-top: 235px;
             }
             @include lg-md
             {
-                margin-top: 190px;
+                margin-top: 195px;
+                margin-left: $gap;
             }
             @include md-sm
             {
                 margin-top: 145px;
-                margin-left: 35px;
+                // margin-left: 15px;
             }
             @include sm
             {
