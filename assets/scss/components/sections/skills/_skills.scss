@@ -9,8 +9,7 @@
     }
     @include sm-min
     {
-        margin-bottom: $gap-lg;
-        padding: $gap-sm;
+        padding: $gap-sm $gap-sm $gap-x2;
     }
     &__container
     {

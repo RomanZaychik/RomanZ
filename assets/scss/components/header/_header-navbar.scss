@@ -14,7 +14,7 @@
         width: $gap-lg;
         height: 24px;
         margin: 0;
-        margin-top: -13px;
+        margin-top: -14px;
 
         cursor: pointer;
         transition: .5s ease-in-out;
@@ -63,13 +63,13 @@
             &:nth-child(3),
             &:nth-child(4)
             {
-                top: 8px;
+                top: 9px;
             }
 
             &:nth-child(5),
             &:nth-child(6)
             {
-                top: 16px;
+                top: 18px;
             }
         }
 
@@ -128,7 +128,9 @@
     }
     &__list
     {
-        @include unlist(0 -$gap-sm 0 0);
+        width: 100%;
+
+        @include unlist(5px -$gap-sm 0 0);
         @include md-min
         {
             display: grid;

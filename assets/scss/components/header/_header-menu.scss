@@ -1,28 +1,22 @@
 @use '../../mixins' as *;
 @use '../../presets' as *;
 
-
 .header-menu
 {
     z-index: 2;
 
-    margin-top: $gap;
-
     @include abs-position;
-    @include md
-    {
-        background-color: rgba($color-gray-dark, .25);
-    }
 
     &__container
     {
         display: grid;
 
-        margin-top: -$gap;
-
-        gap: $gap;
         grid-template-columns: auto 1fr;
         align-items: center;
         @extend %container;
+        @include md
+        {
+            background-color: rgba($color-gray-dark, .25);
+        }
     }
 }

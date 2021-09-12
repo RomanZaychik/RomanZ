@@ -12,6 +12,10 @@
 
         justify-content: center;
         gap: $gap;
+        @include md-sm
+        {
+            margin-bottom: -2px;
+        }
         @include sm
         {
             flex-direction: column;
@@ -21,7 +25,12 @@
     }
     &__container
     {
+        display: grid;
+
         @extend %container;
+        @include md
+        {
+        }
     }
 
     &__title
@@ -34,9 +43,13 @@
         }
         @include lg-md
         {
-            margin: 0 0 43px;
+            margin: 0 0 44px;
         }
-        @include md
+        @include md-sm
+        {
+            margin: 0 0 34px;
+        }
+        @include sm
         {
             margin: 0 0 33px;
         }

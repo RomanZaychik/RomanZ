@@ -8,6 +8,7 @@
     margin-right: $gap;
 
     letter-spacing: .22em;
+
     &__link
     {
         display: block;
@@ -18,8 +19,8 @@
     {
         display: inline-block;
 
-        margin-right: 3px;
-        padding: 12px 3px 15px 4px;
+        margin-right: 4px;
+        padding: 14px 1px 13px 5px;
 
         border: 3px solid $color-highlight;
     }

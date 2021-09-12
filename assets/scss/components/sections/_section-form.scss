@@ -47,6 +47,7 @@
             height: $gap-x3;
             padding: 0 $gap-lg;
 
+            transition: background-color .5s, border-color .5s;
             letter-spacing: .11em;
 
             color: $color-light;
@@ -62,13 +63,24 @@
 
             &:focus
             {
+                border-color: rgba($color-light, .15);
                 border-bottom: 2px solid $color-light;
+                background-color: rgba($color-light, .15);
+                &::placeholder
+                {
+                    color: lighten($color-gray, 30%);
+                }
             }
 
             &:hover
             {
-                border: 2px solid $color-light;
-                background-color: $color-accent;
+                border-color: rgba($color-light, .15);
+                border-bottom: 2px solid $color-light;
+                background-color: rgba($color-light, .15);
+                &::placeholder
+                {
+                    color: lighten($color-gray, 30%);
+                }
             }
 
             &::placeholder
@@ -76,6 +88,19 @@
                 letter-spacing: .15em;
 
                 color: rgba($color-light, .51);
+            }
+            &--btn
+            {
+                &:hover
+                {
+                    border: 2px solid $color-light;
+                    background-color: $color-accent;
+                }
+                &:focus
+                {
+                    border: 2px solid $color-light;
+                    background-color: $color-accent;
+                }
             }
         }
     }
