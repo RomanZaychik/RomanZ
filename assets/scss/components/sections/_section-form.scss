@@ -4,17 +4,10 @@
 
 .form
 {
-    position: relative;
-
-    min-height: 120px;
-
-    background-color: #2d3651;
+    background-color: $color-primary;
 
     &__container
     {
-        position: relative;
-        position: relative;
-
         height: 100%;
 
         @extend %container;
@@ -51,8 +44,9 @@
             letter-spacing: .11em;
 
             color: $color-light;
-            outline: none;
-            background-color: rgba($color-light, .1);
+            border: 2px solid rgba($color-light, 0);
+            border-bottom-color: rgba($color-light, .25);
+            background-color: rgba($color-light, .05);
             &[name='name']
             {
                 @include md-sm
@@ -68,7 +62,7 @@
                 background-color: rgba($color-light, .15);
                 &::placeholder
                 {
-                    color: lighten($color-gray, 30%);
+                    color: lighten($color-gray, 15%);
                 }
             }
 
@@ -79,7 +73,7 @@
                 background-color: rgba($color-light, .15);
                 &::placeholder
                 {
-                    color: lighten($color-gray, 30%);
+                    color: lighten($color-gray, 15%);
                 }
             }
 
@@ -87,17 +81,38 @@
             {
                 letter-spacing: .15em;
 
-                color: rgba($color-light, .51);
+                color: $color-gray;
             }
             &--btn
             {
+                display: flex;
+
+                width: 100%;
+                padding-right: 1em;
+                padding-left: 1em;
+
+                transition: background-color .5s;
+                letter-spacing: .1em;
+
+                color: $color-light;
+                border-color: rgba($color-light, 0);
+                border-bottom-color: rgba($color-light, .2);
+                background-color: rgba($color-light, .1);
+
+                justify-content: center;
+                align-items: center;
+
                 &:hover
                 {
+                    cursor: pointer;
+
                     border: 2px solid $color-light;
                     background-color: $color-accent;
                 }
                 &:focus
                 {
+                    cursor: pointer;
+
                     border: 2px solid $color-light;
                     background-color: $color-accent;
                 }
@@ -107,6 +122,6 @@
 
     &-overlay
     {
-        background-color: #2d3651;
+        background-color: $color-primary;
     }
 }

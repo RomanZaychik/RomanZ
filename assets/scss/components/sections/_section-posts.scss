@@ -156,6 +156,7 @@
             padding: $gap;
 
             transition: background-color .5s;
+            letter-spacing: normal;
 
             color: #637588;
 
@@ -163,19 +164,15 @@
 
             &--title
             {
+                font-family: $font-header;
                 font-size: 1.125rem;
 
-                margin: 1em;
-
                 text-align: center;
+                letter-spacing: .05em;
             }
 
             &--article
             {
-                overflow: hidden;
-
-                margin: 1em;
-
                 text-align: center;
             }
         }
