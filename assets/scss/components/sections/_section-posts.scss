@@ -118,12 +118,13 @@
             .posts-item__text
             {
                 background-color: darken($color-gray-light, 5%);
+                color: $color-primary;
             }
         }
 
         &:focus
         {
-            .posts-item__image
+            .posts-item__bg
             {
                 transform: scale(1.1);
             }
@@ -131,6 +132,7 @@
             .posts-item__text
             {
                 background-color: darken($color-gray-light, 5%);
+                color: $color-primary;
             }
         }
 
