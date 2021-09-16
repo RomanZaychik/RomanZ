@@ -41,11 +41,12 @@
             padding: 0 $gap-lg;
 
             transition: background-color .5s, border-color .5s;
-            letter-spacing: .11em;
+            letter-spacing: .15em;
 
             color: $color-light;
             border: 2px solid rgba($color-light, 0);
             border-bottom-color: rgba($color-light, .25);
+            outline: none;
             background-color: rgba($color-light, .05);
             &[name='name']
             {

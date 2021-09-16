@@ -181,7 +181,7 @@
         {
             width: 0;
             height: 200px;
-           
+
             border: 1px solid rgba(#707070, .27);
 
             @include lg-min
@@ -196,7 +196,6 @@
             @include md-sm
             {
                 margin-top: 145px;
-               
             }
             @include sm
             {
