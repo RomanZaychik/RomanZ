@@ -27,6 +27,7 @@
     {
         font-family: $font-header;
         font-weight: 700;
+        line-height: 1.2em;
 
         margin: 0;
         padding: 0;
@@ -62,7 +63,7 @@
         @extend %container;
         @include lg-min
         {
-            gap: $gap * 2.5;
+            gap: $gap-x5;
         }
         @include lg-md
         {
@@ -73,13 +74,13 @@
             display: grid;
 
             gap: $gap-sm;
-            grid-template-columns: 1fr 1px 236px;
+            grid-template-columns: 1fr 236px;
         }
         @include md-min
         {
             display: grid;
 
-            grid-template-columns: 1fr 1px 271px;
+            grid-template-columns: 1fr 271px;
         }
         @include sm
         {
@@ -114,7 +115,11 @@
         }
         @include lg-md
         {
-            margin-top: 85px;
+            margin-top: $gap-x4;
+        }
+        @include lg-sm
+        {
+            padding-left: 1px;
         }
         @include md
         {
@@ -125,7 +130,7 @@
         {
             overflow: hidden;
 
-            letter-spacing: .055em;
+            letter-spacing: .88px;
 
             @include lg-min
             {
@@ -133,11 +138,12 @@
             }
             @include lg-md
             {
-                margin-top: $gap;
+                margin-top: 21px;
             }
             @include md-sm
             {
                 margin-top: $gap * .75;
+                padding-right: $gap-sm;
             }
             @include sm
             {
@@ -145,61 +151,75 @@
             }
         }
 
+        &__picture
+        {
+            max-width: 100%;
+            max-height: 480px;
+        }
+
         &__image
         {
-            display: flex;
+            display: grid;
 
-            width: 100%;
-            height: 100%;
-
-            border: none;
             background-repeat: no-repeat;
             background-size: contain;
 
-            justify-content: center;
+            align-content: center;
+            justify-items: center;
             @include lg-min
             {
-                margin-top: 102px;
+                padding-top: 81px;
             }
             @include lg-md
             {
-                margin-top: 90px;
+                margin-left: 2px;
+                padding-top: 63px;
             }
             @include md-sm
             {
-                margin-top: 130px;
+                width: 236px;
+                height: 425px;
+                margin-left: 1px;
+                padding-top: 260px;
             }
             @include sm
             {
                 width: 271px;
                 height: 487px;
-                margin-top: -$gap-sm;
+                margin-top: -9px;
+                margin-bottom: 60px;
             }
-        }
 
-        &__line
-        {
-            width: 0;
-            height: 200px;
+            &::before
+            {
+                position: absolute;
 
-            border: 1px solid rgba(#707070, .27);
+                width: 2px;
+                height: 200px;
 
-            @include lg-min
-            {
-                margin-top: 235px;
-            }
-            @include lg-md
-            {
-                margin-top: 195px;
-                margin-left: $gap;
-            }
-            @include md-sm
-            {
-                margin-top: 145px;
-            }
-            @include sm
-            {
-                display: none;
+                content: '';
+
+                background-color: rgba($color-gray, .1);
+
+                @include lg-min
+                {
+                    top: 240px;
+                    right: 341px;
+                }
+                @include lg-md
+                {
+                    top: 195px;
+                    right: 309px;
+                }
+                @include md-sm
+                {
+                    top: 150px;
+                    right: 265px;
+                }
+                @include sm
+                {
+                    display: none;
+                }
             }
         }
     }

@@ -149,16 +149,20 @@
             @include md
             {
                 position: absolute;
-                top: $gap-x5;
-                right: $gap * 2.5;
+                top: 105px;
+                right: $gap;
 
                 display: flex !important;
                 flex-direction: column;
 
+                width: 145px;
+                height: 200px;
+                padding-top: $gap;
+
                 background-color: rgba($color-gray-dark, .9);
 
                 align-items: flex-end;
-                gap: $gap-sm;
+                gap: $gap;
             }
         }
     }
@@ -172,6 +176,13 @@
         padding: $gap $gap-sm;
 
         transition: color .25s;
+
+        @include md
+        {
+            padding-top: $gap-sm;
+            padding-right: $gap-lg;
+            padding-bottom: $gap-sm;
+        }
 
         &:hover,
         &:focus
