@@ -27,25 +27,10 @@
     {
         display: flex;
 
-        margin-left: 1px;
+        margin-top: $gap-x3;
+        margin-left: 2px;
 
-        gap: 18.5px;
-        @include lg-min
-        {
-            margin-top: 61px;
-        }
-        @include lg-md
-        {
-            margin-top: 60px;
-        }
-        @include md-sm
-        {
-            margin-top: 59px;
-        }
-        @include sm
-        {
-            margin-top: 60px;
-        }
+        gap: 18.4px;
 
         &__link
         {
