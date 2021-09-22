@@ -6,6 +6,11 @@
 {
     margin-right: -$gap-sm;
     margin-bottom: -$gap-sm2;
+
+    &__item
+    {
+        margin-bottom: $gap;
+    }
     &__btn
     {
         position: absolute;
@@ -141,29 +146,19 @@
         }
         @include md
         {
+            position: absolute;
+            top: 105px;
+            right: $gap;
+
             display: none;
-        }
 
-        &--active
-        {
-            @include md
-            {
-                position: absolute;
-                top: 105px;
-                right: $gap;
+            width: 145px;
+            height: 200px;
+            padding-top: $gap;
 
-                display: flex !important;
-                flex-direction: column;
+            text-align: right;
 
-                width: 145px;
-                height: 200px;
-                padding-top: $gap;
-
-                background-color: rgba($color-gray-dark, .9);
-
-                align-items: flex-end;
-                gap: $gap;
-            }
+            background-color: rgba($color-gray-dark, .9);
         }
     }
 
