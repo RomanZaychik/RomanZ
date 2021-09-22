@@ -482,6 +482,7 @@ a {
   margin-bottom: -5px;
 }
 .header-navbar__item {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .header-navbar__btn {
@@ -566,7 +567,7 @@ a {
 }
 .header-navbar__list {
   width: 100%;
-  margin: -5px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1290,12 +1291,11 @@ a {
   }
   .header-navbar__list {
     position: absolute;
-    top: 105px;
+    top: 100px;
     right: 20px;
     display: none;
     width: 145px;
     height: 200px;
-    padding-top: 20px;
     text-align: right;
     background-color: rgba(68, 89, 110, 0.9);
   }

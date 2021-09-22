@@ -9,6 +9,7 @@
 
     &__item
     {
+        margin-top: $gap;
         margin-bottom: $gap;
     }
     &__btn
@@ -135,7 +136,7 @@
     {
         width: 100%;
 
-        @include unlist(5px -$gap-sm 0 0);
+        @include unlist;
         @include md-min
         {
             display: grid;
@@ -147,14 +148,13 @@
         @include md
         {
             position: absolute;
-            top: 105px;
+            top: $gap-x5;
             right: $gap;
 
             display: none;
 
             width: 145px;
             height: 200px;
-            padding-top: $gap;
 
             text-align: right;
 
